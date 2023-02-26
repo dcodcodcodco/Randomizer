@@ -11,7 +11,7 @@
         <!--Random Number-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Randomizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Randomizer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,41 +25,52 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="getRandomNumberButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfm-JI-BpA"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="ECR-0J-JfK">
                                 <rect key="frame" x="16" y="184" width="382" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NtA-MM-F46">
-                                        <rect key="frame" x="0.0" y="25" width="82.5" height="35"/>
+                                        <rect key="frame" x="0.0" y="25" width="81" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="5I8-Hp-OUe">
-                                        <rect key="frame" x="115.5" y="0.0" width="40" height="60"/>
+                                        <rect key="frame" x="114" y="0.0" width="39" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3K6-20-dkx">
-                                        <rect key="frame" x="188.5" y="25" width="31.5" height="35"/>
+                                        <rect key="frame" x="186" y="25" width="31" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqN-ZE-58r">
-                                        <rect key="frame" x="253" y="5" width="129" height="55"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="rqN-ZE-58r">
+                                        <rect key="frame" x="250" y="0.0" width="132" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP0-pM-gXa">
+                                <rect key="frame" x="170.5" y="358.5" width="73.5" height="179.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ECR-0J-JfK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2Lr-ni-hsx"/>
+                            <constraint firstItem="lP0-pM-gXa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JyR-wI-Svi"/>
+                            <constraint firstItem="lP0-pM-gXa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a44-to-mFc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ECR-0J-JfK" secondAttribute="trailing" constant="16" id="cAK-xs-T2t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B9R-Ch-Uyc" secondAttribute="bottom" constant="180" id="hBM-a3-92r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B9R-Ch-Uyc" secondAttribute="trailing" constant="100" id="hJC-ro-Yia"/>
@@ -74,6 +85,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="getRandomNumberButton" destination="B9R-Ch-Uyc" id="XTS-4U-Roa"/>
+                        <outlet property="maximumValueLabel" destination="rqN-ZE-58r" id="l33-Jo-uBS"/>
+                        <outlet property="minimumValueLabel" destination="5I8-Hp-OUe" id="ia7-Sa-NYV"/>
+                        <outlet property="randomValueLabel" destination="lP0-pM-gXa" id="7T5-Wn-BgT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,6 +113,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Save">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Yt2-EX-I88" kind="unwind" unwindAction="unwindFor:" id="pG0-Cr-ZD1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4c-Yh-hXu">
                                         <rect key="frame" x="0.0" y="63" width="114.5" height="50"/>
@@ -143,6 +163,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPf-sh-QEl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Yt2-EX-I88" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1515" y="-2"/>
         </scene>
